@@ -13,7 +13,7 @@ keywords:
   - bitrock install builder
 packages:
   - mono@3.2.1
-  -installbuilder@8.6.0
+  - installbuilder@8.6.0
 script: |
   wget "http://installbuilder.bitrock.com/installbuilder-enterprise-8.6.0-linux-x64-installer.run"
   chmod +x installbuilder-enterprise-8.6.0-linux-x64-installer.run
