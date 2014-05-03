@@ -1,0 +1,23 @@
+name: mono-installbuilder
+version: 0.0.1
+inherits: floydpink/mono@0.0.2
+type: main
+platform: ubuntu@12.04
+description: wercker box for mono and bitrock install builder
+keywords:
+  - mono
+  - monodevelop
+  - opensource
+  - .NET
+  - C#
+  - bitrock install builder
+packages:
+  - mono@3.2.1
+  -installbuilder@8.6.0
+script: |
+  wget "http://installbuilder.bitrock.com/installbuilder-enterprise-8.6.0-linux-x64-installer.run"
+  chmod +x installbuilder-enterprise-8.6.0-linux-x64-installer.run
+  sudo ./installbuilder-enterprise-8.6.0-linux-x64-installer.run -y
+env:
+  WERCKER_MONO_VERSION: "3.2.1"
+  WERCKER_BITROCK_INSTALL_BUILDER_VERSION" "8.6.0"
