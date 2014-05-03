@@ -17,7 +17,8 @@ packages:
 script: |
   wget "http://installbuilder.bitrock.com/installbuilder-enterprise-8.6.0-linux-x64-installer.run"
   chmod +x installbuilder-enterprise-8.6.0-linux-x64-installer.run
-  sudo ./installbuilder-enterprise-8.6.0-linux-x64-installer.run -y
+  sudo ./installbuilder-enterprise-8.6.0-linux-x64-installer.run --mode unattended --unattendedmodeui none
+  mono -V
 env:
   WERCKER_MONO_VERSION: "3.2.1"
   WERCKER_BITROCK_INSTALL_BUILDER_VERSION: "8.6.0"
