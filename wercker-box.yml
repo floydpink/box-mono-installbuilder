@@ -20,4 +20,4 @@ script: |
   sudo ./installbuilder-enterprise-8.6.0-linux-x64-installer.run -y
 env:
   WERCKER_MONO_VERSION: "3.2.1"
-  WERCKER_BITROCK_INSTALL_BUILDER_VERSION" "8.6.0"
+  WERCKER_BITROCK_INSTALL_BUILDER_VERSION: "8.6.0"
