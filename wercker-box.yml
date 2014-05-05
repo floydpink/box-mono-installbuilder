@@ -1,5 +1,5 @@
 name: mono-installbuilder
-version: 0.0.2
+version: 0.0.3
 inherits: floydpink/mono@0.0.3
 type: main
 platform: ubuntu@12.04
@@ -11,6 +11,7 @@ keywords:
   - .NET
   - C#
   - bitrock install builder
+  - latest git
 packages:
   - mono@3.2.8
   - installbuilder@8.6.0
@@ -18,7 +19,10 @@ script: |
   wget "http://installbuilder.bitrock.com/installbuilder-enterprise-8.6.0-linux-x64-installer.run"
   chmod +x installbuilder-enterprise-8.6.0-linux-x64-installer.run
   sudo ./installbuilder-enterprise-8.6.0-linux-x64-installer.run --mode unattended --unattendedmodeui none
-  mono -V
+  sudo add-apt-repository ppa:git-core/ppa -y
+  sudo apt-get update
+  sudo apt-get install git -y
+  git --version
 env:
   WERCKER_MONO_VERSION: "3.2.8"
   WERCKER_BITROCK_INSTALL_BUILDER_VERSION: "8.6.0"
