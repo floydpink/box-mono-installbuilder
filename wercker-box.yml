@@ -1,6 +1,6 @@
 name: mono-installbuilder
-version: 0.0.4
-inherits: floydpink/mono@0.0.3
+version: 0.0.5
+inherits: floydpink/mono@0.0.4
 type: main
 platform: ubuntu@12.04
 description: wercker box for mono and bitrock install builder
