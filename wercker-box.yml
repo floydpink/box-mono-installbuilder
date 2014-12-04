@@ -1,5 +1,5 @@
 name: mono-installbuilder
-version: 0.0.7
+version: 0.0.8
 inherits: floydpink/mono@0.0.5
 type: main
 platform: ubuntu@14.04
@@ -19,6 +19,9 @@ script: |
   wget "http://installbuilder.bitrock.com/installbuilder-enterprise-9.5.3-linux-x64-installer.run"
   chmod +x installbuilder-enterprise-9.5.3-linux-x64-installer.run
   sudo ./installbuilder-enterprise-9.5.3-linux-x64-installer.run --mode unattended --unattendedmodeui none
+  sudo add-apt-repository ppa:git-core/ppa -y 	
+  sudo apt-get update 	
+  sudo apt-get install git -y
   git --version
 env:
   WERCKER_MONO_VERSION: "3.2.8"
