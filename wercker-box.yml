@@ -1,8 +1,8 @@
 name: mono-installbuilder
-version: 0.0.6
-inherits: floydpink/mono@0.0.4
+version: 0.0.7
+inherits: floydpink/mono@0.0.5
 type: main
-platform: ubuntu@12.04
+platform: ubuntu@14.04
 description: wercker box for mono and bitrock install builder
 keywords:
   - mono
@@ -14,15 +14,12 @@ keywords:
   - latest git
 packages:
   - mono@3.2.8
-  - installbuilder@9.0.1
+  - installbuilder@9.5.3
 script: |
-  wget "http://installbuilder.bitrock.com/installbuilder-enterprise-9.0.1-linux-x64-installer.run"
-  chmod +x installbuilder-enterprise-9.0.1-linux-x64-installer.run
-  sudo ./installbuilder-enterprise-9.0.1-linux-x64-installer.run --mode unattended --unattendedmodeui none
-  sudo add-apt-repository ppa:git-core/ppa -y
-  sudo apt-get update
-  sudo apt-get install git -y
+  wget "http://installbuilder.bitrock.com/installbuilder-enterprise-9.5.3-linux-x64-installer.run"
+  chmod +x installbuilder-enterprise-9.5.3-linux-x64-installer.run
+  sudo ./installbuilder-enterprise-9.5.3-linux-x64-installer.run --mode unattended --unattendedmodeui none
   git --version
 env:
   WERCKER_MONO_VERSION: "3.2.8"
-  WERCKER_BITROCK_INSTALL_BUILDER_VERSION: "9.0.1"
+  WERCKER_BITROCK_INSTALL_BUILDER_VERSION: "9.5.3"
