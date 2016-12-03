@@ -1,5 +1,5 @@
 name: mono-installbuilder
-version: 0.0.9
+version: 0.0.10
 inherits: floydpink/mono@0.0.7
 type: main
 platform: ubuntu@14.04
